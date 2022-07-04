@@ -3,6 +3,9 @@
 #include <math.h>
 #include <sys/stat.h>
 
+// The last valid CBM BASIC line
+static const unsigned int max_basic_line_no = 63999;
+
 int main (int argc, char**argv)
 {
   unsigned char ch;
@@ -13,7 +16,7 @@ int main (int argc, char**argv)
   fputs("File2data v1.0 - Convert a binary file to CBM BASIC DATA statements\n", stderr);
   fputs("(C)2022 Luigi Di Fraia\n", stderr);
 
-  if (argc != 3 || sscanf (argv[1], "%u", &start) != 1 || start > 65535) {
+  if (argc != 3 || sscanf (argv[1], "%u", &start) != 1 || start > max_basic_line_no) {
     fprintf(stderr, "Usage error - %s <start line no> <filename>\n", argv[0]);
     exit(EXIT_FAILURE);
   }
@@ -34,7 +37,7 @@ int main (int argc, char**argv)
   }
 
   // Check if the last line number (including the subroutine) fits in a 16-bit value
-  if ((lines / 8 + 1) * 10 > 65535) {
+  if ((lines / 8 + 1) * 10 > max_basic_line_no) {
     fputs("Too much data to write\n", stderr);
     exit(EXIT_FAILURE);
   }
