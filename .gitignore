@@ -1,6 +1,9 @@
 # Object files
 *.o
 
+# Intermediate files
+mindscape-protection-basic.bas
+
 # Binaries
 *.prg
 *.bin
