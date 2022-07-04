@@ -1,0 +1,9 @@
+# Object files
+*.o
+
+# Binaries
+*.prg
+*.bin
+
+# Disk images
+*.d64
