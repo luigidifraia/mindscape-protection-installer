@@ -1,6 +1,6 @@
-  100 rem mindscape protection installer - 1541 - v1.2 by luigi di fraia
+  100 rem mindscape protection installer v1.0 by luigi di fraia
   110 gosub700:l=lines-1:dimd$(l)
-  120 print"{clr}mindscape protection installer - 1541"
+  120 print"{clr}mindscape protection installer v1.0"
   130 print"{down}writes illegal gcr data to t/s 1/0"
   140 print"that causes weak bits at read time"
   150 print"{down}insert a zaxxon clone in drive"
