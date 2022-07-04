@@ -1,5 +1,5 @@
 # Mindscape protection installer for Commodore floppy disks
-This tool writes illegal GCR data to t/s 1/0 of a Mindscape floppy disk with a Commodore 1541 in order to cause weak bits at read time.\
+This tool uses a a Commodore 64 and 1541 drive to write illegal GCR data to track/sector 1/0 of a cloned Mindscape floppy disk, in order to cause weak bits at read time and pass the Mindscape copy protection.\
 The tool is provided for research purposes only. It's the end user's responsibility to use it:
 - in a way that does not infringe copyright laws and agreements still in effect, and
 - only for personal purposes, without any intent to sell or distribute illegal clones of original software.
