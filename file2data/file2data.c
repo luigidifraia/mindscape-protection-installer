@@ -24,10 +24,10 @@ int main (int argc, char**argv)
     exit(EXIT_FAILURE);
   }
 
+  // Calculate the amount of lines worth of data
   fstat(fileno(fd), &st);
   lines = ceil(st.st_size / 8.0);
 
-  // Calculate the amount of lines worth of data
   if (lines == 0) {
     fputs("No data to write\n", stderr);
     exit(EXIT_FAILURE);
