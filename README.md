@@ -2,7 +2,7 @@
 This tool writes illegal GCR data to t/s 1/0 of a Mindscape floppy disk with a Commodore 1541 in order to cause weak bits at read time.\
 The tool is provided for research purposes only. It's the end user's responsibility to use it:
 - in a way that does not infringe copyright laws and agreements still in effect, and
-- only for personal purposes, without any intent to sell illegal clones of original software.
+- only for personal purposes, without any intent to sell or distribute illegal clones of original software.
 
 ## Notes
 - Assemble source files with `64tass` by Soci/Singular. Version 1.56.2625 from [Sourceforge](https://sourceforge.net/projects/tass64/) has been successfully tested. . A Windows executable is provided for user convenience.
