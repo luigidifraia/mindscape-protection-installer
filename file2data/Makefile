@@ -1,9 +1,8 @@
 # Project: file2data
 
 CC   = gcc
-RES  = 
-OBJ  = file2data.o $(RES)
-LINKOBJ  = file2data.o $(RES)
+OBJ  = file2data.o
+LINKOBJ  = file2data.o
 LIBS = -lm  
 INCS =  
 BIN  = file2data
@@ -12,14 +11,13 @@ RM = rm -f
 
 .PHONY: all all-before all-after clean clean-custom
 
-all: all-before file2data all-after
-
+all: all-before $(BIN) all-after
 
 clean: clean-custom
-	${RM} $(OBJ) $(BIN)
+	$(RM) $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CC) $(LINKOBJ) -o "file2data" $(LIBS)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
 file2data.o: file2data.c
 	$(CC) -c file2data.c -o file2data.o $(CFLAGS)
